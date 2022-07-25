@@ -27,6 +27,8 @@ methodBB gets removed
 
 - importing a cjs module -> cjs module is not tress shaken but other sibling modules get treeshaken
 
+- add tsconfig.json -> still tree-shakes
+
 ```
 export const methodDA = () => {
   return "from moduleD.methodDA";
