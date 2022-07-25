@@ -5,6 +5,8 @@ import { adapterMethodPA, adapterMethodQA } from "./utils/adapterServices";
 import methodAA from "./utils/moduleA";
 import { methodBA, methodBB } from "./utils/moduleB";
 import {methodCA, methodDA} from "./utils/index";
+import { methodMA } from "./utils/cjsModule";
+import svg from "./assets/gateway-logo.svg";
 
 class App extends Component {
   render() {
@@ -15,6 +17,7 @@ class App extends Component {
     const adapterStringQ = adapterMethodQA();
     const string4 = methodCA();
     const string5 = methodDA();
+    const cjsString = methodMA();
     return (
       <div styleName="App">
         <h1> Hello, World! </h1>
@@ -26,6 +29,8 @@ class App extends Component {
         <ComponentAlpha />
         <p>{string4}</p>
         {/* <p>{string5}</p> */}
+        <p>{cjsString}</p>
+        <img src={svg} />
       </div>
     );
   }

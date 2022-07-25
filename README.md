@@ -25,6 +25,8 @@ methodBB gets removed
 - asset-loader -> tree-shaking works
 - string-replace-loader -> tree-shaking works
 
+- importing a cjs module -> cjs module is not tress shaken but other sibling modules get treeshaken
+
 ```
 export const methodDA = () => {
   return "from moduleD.methodDA";

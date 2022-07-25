@@ -22,5 +22,9 @@ module.exports = (env) => {
         }),
       ],
     },
+    stats: {
+      modulesSpace: Infinity,
+      optimizationBailout: true,
+    }
   });
 };
