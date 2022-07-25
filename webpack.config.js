@@ -49,6 +49,18 @@ module.exports = (env) => {
             },
           },
         },
+        {
+          test: /\.js$/,
+          include: [
+            path.resolve(__dirname, 'src/utils/adapterServices.js'),
+          ],
+          loader: 'string-replace-loader',
+          options: {
+            search: '__BROKER_ADAPTERS__',
+            replace: `../adapters/brokerA`,
+            flags: 'g',
+          },
+        },
       ],
     },
     resolve: { extensions: ["*", ".js", ".jsx", ".tsx"] },

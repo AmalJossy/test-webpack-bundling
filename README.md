@@ -23,3 +23,11 @@ methodBB gets removed
 - babel-plugin-react-css-modules -> tree-shaking works
 - postcss -> tree-shaking works
 - asset-loader -> tree-shaking works
+- string-replace-loader -> tree-shaking works
+
+```
+export const methodDA = () => {
+  return "from moduleD.methodDA";
+};
+```
+these are considered side effect free, default exports are not(even if re exported).

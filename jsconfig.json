@@ -2,7 +2,7 @@
   "compilerOptions": {
       "target": "ES6",
       "jsx": "react",
-      "module": "commonjs",
+      "module": "ES6",
       "paths": {
           "~/*": ["src/*"],
       },
