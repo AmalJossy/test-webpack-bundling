@@ -11,13 +11,12 @@ module.exports = (broker) => {
         //   variables: colors,
         // }),
         require('postcss-flexbugs-fixes'),
-        // require('postcss-custom-properties')({
-        //   importFrom: [
-        //     './node_modules/@smallcase/shringar/variables.css',
-        //     `./src/adapters/${broker}/variables/variables.css`,
-        //   ],
-        //   preserve: false,
-        // }),
+        require('postcss-custom-properties')({
+          importFrom: [
+            `./variables.css`,
+          ],
+          preserve: false,
+        }),
         require('cssnano')({
           preset: 'default',
         }),
