@@ -1,3 +1,4 @@
 /dist
 /node_modules
 bundle-stats.json
+.DS_Store

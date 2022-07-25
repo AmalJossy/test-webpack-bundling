@@ -1,0 +1,6 @@
+.alpha-box {
+    width:100px;
+    height:100px;
+    background-color: blueviolet;
+    background: url(../../assets/gateway-logo.svg);
+}

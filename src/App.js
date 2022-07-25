@@ -1,5 +1,6 @@
 import React, { Component} from "react";
 import "./App.css";
+import ComponentAlpha from "./components/ComponentAlpha";
 import methodAA from "./utils/moduleA";
 import { methodBA, methodBB } from "./utils/moduleB";
 
@@ -13,6 +14,8 @@ class App extends Component{
         <h1> Hello, World! </h1>
         <p>{string1}</p>
         <p>{string2}</p>
+        <p>{string3}</p>
+        <ComponentAlpha />
       </div>
     );
   }

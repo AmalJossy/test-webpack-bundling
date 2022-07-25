@@ -1,5 +1,6 @@
 const path = require("path");
 const webpack = require("webpack");
+const postCssConfig = require('./postcss.config');
 
 module.exports = (env) => {
   return {
@@ -8,18 +9,49 @@ module.exports = (env) => {
     module: {
       rules: [
         {
-          test: /\.(js|jsx)$/,
+          test: /\.(js|jsx|tsx)$/,
           exclude: /(node_modules|bower_components)/,
           loader: "babel-loader",
-          options: { presets: ["@babel/env"] },
         },
         {
           test: /\.css$/,
-          use: ["style-loader", "css-loader"],
+          use: [
+            {
+              loader: 'style-loader',
+            },
+            {
+              loader: 'css-loader',
+              options: {
+                url: true,
+                importLoaders: 1,
+                modules: {
+                  localIdentName: '[name]__[local]__[hash:base64:5]',
+                },
+              },
+            },
+            {
+              loader: 'postcss-loader',
+              options: {
+                postcssOptions: {
+                  ...postCssConfig,
+                  config: false,
+                },
+              },
+            },
+          ],
+        },
+        {
+          test: /\.(woff|woff2|eot|ttf|svg|png|jpg)$/,
+          type: 'asset',
+          parser: {
+            dataUrlCondition: {
+              maxSize: 100000,
+            },
+          },
         },
       ],
     },
-    resolve: { extensions: ["*", ".js", ".jsx"] },
+    resolve: { extensions: ["*", ".js", ".jsx", ".tsx"] },
     output: {
       path: path.resolve(__dirname, "dist/"),
       publicPath: "/dist/",

@@ -21,3 +21,5 @@ class App extends Component{
 methodBB gets removed
 
 - babel-plugin-react-css-modules -> tree-shaking works
+- postcss -> tree-shaking works
+- asset-loader -> tree-shaking works
