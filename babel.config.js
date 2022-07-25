@@ -16,6 +16,17 @@ module.exports = (api) => {
       ],
       "@babel/preset-typescript",
     ],
+    plugins: [
+      [
+        'react-css-modules',
+        {
+          autoResolveMultipleImports: true,
+          generateScopedName: '[name]__[local]__[hash:base64:5]',
+          handleMissingStyleName: 'warn',
+          webpackHotModuleReloading: true,
+        },
+      ],
+    ],
   };
   api.cache(true);
 

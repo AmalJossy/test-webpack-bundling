@@ -1,5 +1,5 @@
-import React, { Component} from "react";
-import "./App.css";
+
+```
 import methodAA from "./utils/moduleA";
 import { methodBA, methodBB } from "./utils/moduleB";
 
@@ -9,7 +9,7 @@ class App extends Component{
     const string2 = methodBA();
     const string3 = methodBB();
     return(
-      <div styleName="App">
+      <div className="App">
         <h1> Hello, World! </h1>
         <p>{string1}</p>
         <p>{string2}</p>
@@ -17,5 +17,7 @@ class App extends Component{
     );
   }
 }
+```
+methodBB gets removed
 
-export default App;
+- babel-plugin-react-css-modules -> tree-shaking works
