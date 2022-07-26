@@ -14,7 +14,7 @@ class App extends Component {
     const string2 = methodBA();
     const string3 = methodBB();
     const adapterStringP = adapterMethodPA();
-    const adapterStringQ = adapterMethodQA();
+    // const adapterStringQ = adapterMethodQA();
     const string4 = methodCA();
     const string5 = methodDA();
     const cjsString = methodMA();

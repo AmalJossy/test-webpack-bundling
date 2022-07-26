@@ -20,6 +20,7 @@ class App extends Component{
 ```
 methodBB gets removed
 
+----
 - babel-plugin-react-css-modules -> tree-shaking works
 - postcss -> tree-shaking works
 - asset-loader -> tree-shaking works
@@ -29,9 +30,16 @@ methodBB gets removed
 
 - add tsconfig.json -> still tree-shakes
 
+----
 ```
 export const methodDA = () => {
   return "from moduleD.methodDA";
 };
 ```
 these are considered side effect free, default exports are not(even if re exported).
+
+----
+from https://sgom.es/posts/2020-06-15-everything-you-never-wanted-to-know-about-side-effects/
+its said that re exports are hard to tree shake as they can have sideffects
+not seeing this for adapterMethodQA
+----
