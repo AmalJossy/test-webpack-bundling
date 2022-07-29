@@ -74,3 +74,7 @@ export const methodBB = () => {
   abczyxwvabcdxwvabcdxwvabcdxwvabcdxwvabcdxwvabcdxwvabcdxwvabcdxwvabcdxwvabcdxwvabcdxwvabcdxwvabcdxwvabcdxwvabcdxwvabcdxwvabcdxwvabcdxwvabcdxwvabcdxwvucdefg
   `;
 };
+
+export const methodBC = () => {
+  return "from moduleB.methodBC should be dynamic";
+}

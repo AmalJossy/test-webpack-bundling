@@ -43,3 +43,6 @@ from https://sgom.es/posts/2020-06-15-everything-you-never-wanted-to-know-about-
 its said that re exports are hard to tree shake as they can have sideffects
 not seeing this for adapterMethodQA
 ----
+
+## Problem
+- when 2 exports from one file is used by 2 chunks(dynamically loaded component), it goes to the first bundle
